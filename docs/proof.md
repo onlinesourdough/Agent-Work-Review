@@ -62,6 +62,26 @@ Delivery status: **PASS**.
   checks, five rejected share-card mutations, offline, with no external
   dependencies.
 
+## Stable distribution follow-up
+
+This Build follow-up starts from public repository commit
+`8974be45d757167eb77f60cbf45f970a8dd96585`; it does not rewrite the initial
+publication evidence above.
+
+- Website release `gustavonline/onlinesourdough@e0a45377b3ebb42ee05df5300caf9a6a13c1aea5`
+  publishes the repository-owned runbook at
+  `https://onlinesourdough.com/agent-work-review.md`.
+- A live anonymous GET on 2026-09-04 returned HTTP 200 with media type
+  `text/markdown; charset=utf-8` and exactly 18,952 bytes. The response was
+  byte-for-byte identical to the unchanged local `agent-work-review.md` and had
+  SHA-256
+  `7d68b205c1b2c9dbc0044394ee98c7d4f7545ad3089c0aff6b61f398f5b628e9`.
+- The public human entry point at
+  `https://onlinesourdough.com/agent-work-review/` returned HTTP 200 with media
+  type `text/html; charset=utf-8`.
+- The website owns these distribution and entry points. This repository
+  remains the method owner and source of truth.
+
 ## Recovery
 
 Recovery status: **PASS** for the static repository rebuild path.
