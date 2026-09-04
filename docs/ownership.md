@@ -24,9 +24,9 @@
 ## Boundary
 
 This repository owns the runbook, examples, validator, and Project records. It
-does not own, collect, or transmit a user's history or report. The website
-Project owns the public [human entry point](https://onlinesourdough.com/agent-work-review/)
-and [runbook distribution route](https://onlinesourdough.com/agent-work-review.md).
+does not own, collect, or transmit a user's history or report. The Resources
+Project owns the public [human entry point](https://resources.onlinesourdough.com/agent-work-review)
+and [runbook distribution route](https://resources.onlinesourdough.com/agent-work-review.md).
 It publishes this repository's canonical runbook unchanged and does not gain
 ownership of the method.
 
