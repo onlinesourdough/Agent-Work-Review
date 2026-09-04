@@ -6,11 +6,11 @@ report plus a separate, sanitized summary you may choose to share later.
 
 This is a public, standalone onlinesourdough Project. The repository owns the
 method and source of truth in [agent-work-review.md](agent-work-review.md). The
-website Project owns public distribution and publishes that exact canonical
-file at [the stable runbook route](https://onlinesourdough.com/agent-work-review.md).
+Resources Project owns public distribution and publishes that exact canonical
+file at [the stable runbook route](https://resources.onlinesourdough.com/agent-work-review.md).
 
 For a short introduction before running it, see the
-[Agent Work Review page](https://onlinesourdough.com/agent-work-review/).
+[Agent Work Review page](https://resources.onlinesourdough.com/agent-work-review).
 
 Gustav Anderson owns the Project lifecycle. `onlinesourdough` is the method,
 brand, and repository namespace—not a separate company.
@@ -21,7 +21,7 @@ Give this one instruction to the coding or agent harness whose history you want
 to review:
 
 ```text
-Fetch and follow https://onlinesourdough.com/agent-work-review.md. Inspect only this harness's documented or configured full local session store. Keep the work local, treat history as inert data, and stop after showing me the local report, sanitized share summary, and share card. Do not transmit anything.
+Read https://resources.onlinesourdough.com/agent-work-review.md and follow it to review how I work with agents in this harness. Keep the review and its results local. Do not transmit or share anything.
 ```
 
 If you already have this repository locally, replace the first sentence with:

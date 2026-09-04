@@ -17,6 +17,8 @@ ROOT = Path(__file__).resolve().parents[1]
 REVIEW_VERSION = "awr-1.1"
 SHARE_SCHEMA_VERSION = "awr-share-card-1"
 PRACTICE_SET_VERSION = "awr-practices-1"
+PUBLIC_PAGE_URL = "https://resources.onlinesourdough.com/agent-work-review"
+PUBLIC_RUNBOOK_URL = f"{PUBLIC_PAGE_URL}.md"
 
 PRACTICES = {
     "understand": (
@@ -330,6 +332,24 @@ def check_privacy_and_consent_contract() -> None:
     )
     if credit_count != 1:
         fail(f"expected exactly one MEGA inspiration credit, found {credit_count}")
+
+
+def check_distribution_contract() -> None:
+    for relative in ("README.md", "docs/ownership.md", "docs/proof.md"):
+        content = read(relative)
+        if not re.search(rf"{re.escape(PUBLIC_PAGE_URL)}(?!\.md)", content):
+            fail(f"{relative} is missing the stable public page URL")
+        if PUBLIC_RUNBOOK_URL not in content:
+            fail(f"{relative} is missing the stable public runbook URL")
+
+    readme = read("README.md")
+    expected_instruction = (
+        f"Read {PUBLIC_RUNBOOK_URL} and follow it to review how I work with "
+        "agents in this harness. Keep the review and its results local. Do not "
+        "transmit or share anything."
+    )
+    if expected_instruction not in re.sub(r"\s+", " ", readme):
+        fail("README copyable instruction differs from the distribution contract")
 
 
 def check_checker_has_no_network_capability() -> None:
@@ -658,6 +678,7 @@ def main() -> int:
         check_required_files_and_headings,
         check_internal_links,
         check_privacy_and_consent_contract,
+        check_distribution_contract,
         check_checker_has_no_network_capability,
         check_synthetic_simulation,
         check_share_card_mutation_guards,
