@@ -31,20 +31,51 @@ Build evidence recorded on 2026-09-04:
 - [x] Full-file and whitespace inspection passed. A bounded comparison with the
   inspiration reference found a longest contiguous overlap of five words.
 
-Unavailable during Build: a run against real user history, first-use outcome
-measurement, and recovery from a reviewed commit.
+Unavailable during Build: a run against real user history and first-use outcome
+measurement. Recovery from a reviewed commit was exercised after publication,
+as recorded below.
 
-## Lead Review and authorized Ship
+## Lead Review
 
-- Lead Review: PASS on 2026-09-04 for the reviewed Project artifact.
-- Authorized Git target: the private `onlinesourdough/Agent-Work-Review`
-  repository on branch `main`.
-- Pre-delivery read: the repository was private and remote `main` was absent.
-- Release check: `python3 -B scripts/check_repository.py` must pass after this
-  proof update and at the committed tree.
-- Immutable delivery evidence: the one root commit and a fresh readback proving
-  `origin/main` equals local `HEAD`; the exact SHA and visibility are returned
-  in the Ship handoff.
+- Project Review and publish-safety Review both passed on 2026-09-04 for exact
+  commit `554b93e59ef69ef97bc5113b9298ce1c5614411e`.
+- Post-Ship Review found that this proof record and the recovery record still
+  described pre-publication state. This two-document correction responds to
+  that finding and passed lead re-review on 2026-09-04.
+
+## Delivery
+
+Delivery status: **PASS**.
+
+- The initial public commit is
+  `554b93e59ef69ef97bc5113b9298ce1c5614411e` on `main` in the public
+  `onlinesourdough/Agent-Work-Review` repository.
+- Fresh reads after publication proved that local `HEAD`, fetched
+  `origin/main`, and live remote `main` all resolved to that commit. GitHub
+  reported visibility `PUBLIC` and default branch `main`.
+- Anonymous HTTP reads without authentication headers or tokens succeeded for
+  the repository page, rendered README, and raw `agent-work-review.md`.
+- The anonymous raw runbook began with `# Agent Work Review runbook`, contained
+  zero configured URLs, and had SHA-256
+  `7d68b205c1b2c9dbc0044394ee98c7d4f7545ad3089c0aff6b61f398f5b628e9`.
+- `python3 -B scripts/check_repository.py` passed after publication: six
+  checks, five rejected share-card mutations, offline, with no external
+  dependencies.
+
+## Recovery
+
+Recovery status: **PASS** for the static repository rebuild path.
+
+- A fresh temporary directory was created on 2026-09-04 and the public HTTPS
+  repository was cloned with Git credential helpers disabled.
+- The clean clone checked out
+  `554b93e59ef69ef97bc5113b9298ce1c5614411e` and its offline repository checker
+  passed with the same six checks and five rejected mutations.
+- The validated temporary directory was removed after the rehearsal.
+- Repository recovery is a reviewed follow-up commit that restores correct
+  content, or a reproducible rebuild from a known reviewed commit. Making a
+  public repository private cannot reverse prior disclosure and is not claimed
+  as recovery.
 
 ## Security and denial evidence
 
@@ -60,12 +91,14 @@ analytics path, or runtime service in this Project.
 - Sharing is denied by default and requires fresh permission for exact content
   and destination.
 
-## Measurement
+## Outcome
+
+Outcome status: **PENDING**.
 
 - Outcome signal: a user completes the local report and identifies a useful
   next behavior or control without unintended transmission.
 - Measurement owner: Gustav Anderson.
-- Measurement point or window: pending first authorized use after Ship.
+- Measurement point or window: pending the first real authorized use.
 
 Repository checks prove behavior and delivery only. User usefulness, freedom,
 and economic outcomes remain pending measurement.
