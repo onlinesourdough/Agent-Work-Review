@@ -1,0 +1,59 @@
+{
+  "schema_version": "awr-share-card-1",
+  "review_version": "awr-1.1",
+  "coverage": {
+    "episode_count_bucket": "1-5",
+    "window_bucket": "1-30-days",
+    "confidence": "high"
+  },
+  "stages": {
+    "understand": {
+      "owner_led": 4,
+      "system_led": 1,
+      "absent": 5,
+      "no_opportunity": 10,
+      "unmeasured": 5,
+      "verified": 5
+    },
+    "choose": {
+      "owner_led": 3,
+      "system_led": 2,
+      "absent": 4,
+      "no_opportunity": 11,
+      "unmeasured": 5,
+      "verified": 5
+    },
+    "build": {
+      "owner_led": 6,
+      "system_led": 7,
+      "absent": 2,
+      "no_opportunity": 5,
+      "unmeasured": 5,
+      "verified": 13
+    },
+    "run": {
+      "owner_led": 5,
+      "system_led": 4,
+      "absent": 4,
+      "no_opportunity": 7,
+      "unmeasured": 5,
+      "verified": 9
+    }
+  },
+  "strength_ids": [
+    "choose.smallest_result",
+    "build.explicit_proof",
+    "run.authority_recovery"
+  ],
+  "gap_ids": [
+    "understand.current_process",
+    "choose.alternatives",
+    "run.final_replay"
+  ],
+  "priority_ids": [
+    "understand.current_process",
+    "choose.alternatives",
+    "run.final_replay"
+  ],
+  "business_outcome_status": "pending"
+}
