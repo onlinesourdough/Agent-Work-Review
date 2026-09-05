@@ -6,10 +6,13 @@ Build and operate the smallest independent Project that creates this outcome:
 
 ## Start
 
-Read this file, [README.md](README.md), and the canonical
-[review runbook](agent-work-review.md). Confirm that this repository owns an
-independent lifecycle. Run the project-local Spec before implementation when
-scope, ownership, boundaries, proof, or contracts are not already clear.
+Read this file and [README.md](README.md) for the repository's independent
+lifecycle and product boundary. Read the canonical [review runbook](agent-work-review.md)
+when running a history review or changing its method, privacy, evidence, or
+report contracts. Contributor maintenance does not authorize history access.
+Use project-local Spec when scope, ownership, boundaries, proof, or contracts
+are materially unclear; reuse accepted inputs for an already bounded change.
+Handle mechanical local edits directly with the relevant validator and review.
 
 Ask one question only when a missing owner decision materially changes the
 Project. Keep resolved context intact and record technical inferences locally.
@@ -25,8 +28,8 @@ Project. Keep resolved context intact and record technical inferences locally.
 | Authorized delivery, deployment, activation, or recovery | `.agents/skills/ship-project/SKILL.md` |
 | Periodic whole-repository health check | `.agents/skills/audit-project/SKILL.md` |
 
-See the [local skill index](.agents/skills/README.md) for the flat layout,
-ownership boundary, and specialist-gap route.
+Use the [local skill index](.agents/skills/README.md) when adding or relocating
+skills or resolving a specialist capability gap.
 
 Keep one lifecycle record across Spec, Build, Review, revisions, and any
 authorized Ship. The Project repository is canonical after creation.

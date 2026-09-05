@@ -1,6 +1,6 @@
 ---
 name: ship-project
-description: Prepare, release, deploy, activate, and verify a technical solution with a real recovery path. Use after review when publishing an Application, Service, Automation, Integration, Library, or System change, or when changing CI, environments, secrets, migrations, deployment, rollback, replay, or operational ownership.
+description: Deliver reviewed project changes to an authorized target and verify delivery, recovery, and outcome separately. Use for publication, deployment, activation, or operational recovery; preparation alone grants no delivery authority.
 ---
 
 # Project Ship
@@ -62,7 +62,9 @@ Local-only Projects and Projects without a remote do not need this Git gate.
 
 ## Keep delivery proportional
 
-- Install from the lockfile and run the repository's real checks.
+- Run the repository's real checks. Install from a lockfile only when the
+  reviewed solution has dependencies and installation is authorized; this
+  static Project's checker uses the Python standard library.
 - Use CI to make required build, test, validation, and security evidence
   repeatable. Automate deployment only when authority, verification, and
   recovery are equally explicit.
@@ -86,21 +88,14 @@ Local-only Projects and Projects without a remote do not need this Git gate.
 6. Activate only after the gate passes.
 7. Stop, disable, roll back, or recover when verification fails.
 
-Shape-specific proof:
-
-- **Application:** real browser journey, assets, server boundaries, and
-  rollback or reproducible redeploy.
-- **Service:** health, caller contract, dependency failure, and previous
-  artifact or forward recovery.
-- **Automation:** safe run, published version, credentials, retries, replay,
-  error channel, activation owner, and kill switch.
-- **Integration:** both ends, delivery acknowledgement, timeout, retry, and
-  reconciliation.
-- **Library:** immutable package or artifact, clean consumer install, public
-  interface, compatibility, and previous-version recovery.
-- **System:** reviewed technical truth, desired state, drift signal, ownership,
-  incident route, and a validated rebuild or restore; no fake runtime
-  deployment.
+For this static Project, prove the published runbook matches the reviewed
+canonical bytes and validate a rebuild from the reviewed recovery point. The
+Resources Project owns distribution; source publication does not authorize
+changing its deployment. Use [ownership](../../../docs/ownership.md) and
+[recovery](../../../docs/recovery.md) for the current responsibilities and path.
+If an accepted contract introduces a runtime, verify its real caller journey,
+dependency failure, retry/reconciliation, failure visibility, and recovery as
+applicable before activation.
 
 A backup is recovery evidence only after its restore path has been tested.
 Document retention and access ownership. Keep secrets out of repositories,

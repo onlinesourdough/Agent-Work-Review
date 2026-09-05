@@ -1,10 +1,9 @@
 ---
 name: audit-project
 description: >-
-  Use when a natural-language request asks to audit, check, maintain, repair,
-  reconcile, or investigate drift in an evolved Project's current
-  truth, documentation, proof, ownership, security, operation, or recovery.
-  Run periodically after accumulated change, not for every trivial change.
+  Audit accumulated repository drift in documentation, behavior, ownership,
+  security, proof, and recovery. Use for a repository health check or suspected
+  drift; use review-project for an individual change.
 ---
 
 # Project Audit
@@ -16,10 +15,11 @@ outcome and canonical truth, never parity with the original seed.
 
 ## Audit
 
-Read the current README, project instructions, relevant skills, code,
-interfaces, configuration, workflows, tests, runbooks, and operational or
-recovery records. Establish the current outcome, owner, boundaries, and
-canonical sources before judging any document.
+Start with the README and project instructions, then inspect the sources and
+evidence relevant to the requested audit. For a whole-repository audit, cover
+code, interfaces, configuration, workflows, tests, and operation/recovery
+records where present. Establish the current outcome, owner, boundaries, and
+canonical sources before judging documents.
 
 Check, as relevant to the solution:
 
@@ -57,9 +57,12 @@ inferring currentness from local state:
    embedded user information or token; never copy credentials into evidence.
 4. Record tracked, staged, unstaged, and untracked state and classify the
    worktree as clean or dirty.
-5. Fetch the exact upstream without changing the current branch or worktree,
-   then resolve the fresh fetched live upstream object. If access or authority
-   is uncertain, or the fetch cannot prove which live object was read, record
+5. Read the exact live upstream without changing the current branch or worktree.
+   A non-interactive remote ref read proves equality when its hash equals local
+   `HEAD`. Otherwise fetch the exact upstream into an isolated scratch Git
+   store to resolve ancestry without updating checkout refs or `FETCH_HEAD`.
+   If access or authority is uncertain, or the read cannot prove which live
+   object was observed, record
    the evidence gap and return **Needs decision**.
 6. Compare local `HEAD` with that live object and classify the relation as
    equal, behind, ahead, or diverged: equal hashes are equal;
@@ -86,10 +89,12 @@ validation commands. Record each exact command and its exact result. If a
 relevant check is unavailable or unsafe to run, disclose it as an evidence gap.
 Do not run consequential or mutating commands or operations.
 
-Do not delete files or change runtime code, configuration, contracts, security
-meaning, ownership, authority, or operational behavior. Require one owner
-decision for semantic conflict, deletion, authority, or unclear canonical
-truth. Record the location, evidence, and decision needed; do not guess.
+The audit itself does not authorize deletion or changes to runtime code,
+configuration, contracts, security meaning, ownership, or operational behavior.
+Route explicitly authorized substantive corrections through Spec when needed,
+Build, and Review in the same lifecycle. Ask only when a semantic conflict,
+missing authority, or unclear canonical truth requires an owner decision;
+record the location and evidence instead of guessing.
 
 ## Return
 

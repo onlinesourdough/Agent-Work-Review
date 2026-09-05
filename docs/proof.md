@@ -111,6 +111,34 @@ analytics path, or runtime service in this Project.
 - Sharing is denied by default and requires fresh permission for exact content
   and destination.
 
+## Local contributor-instruction audit — 2026-09-05
+
+Lead Review accepted the local contributor-instruction changes on 2026-09-05.
+The evidence below records the local audit before authorized source delivery;
+it does not claim a product release or new runtime proof.
+
+- Inspected root `AGENTS.md`, all six tracked lifecycle `SKILL.md` files, the
+  local skill index, README, product runbook, ownership/recovery/proof records,
+  checker, and synthetic examples. Scoped contributor reads and discovery;
+  replaced generic Build recipes with this Project's validator and synthetic
+  evidence route. Accepted contracts and specific authority carry forward.
+- Live credential-free `git ls-remote` read of `origin` proved `main` equal to
+  local `HEAD` at `2f1dc64dade708ae3f9e823080e49758336abd6a`. No fetch, checkout,
+  ref update, or reconciliation was performed.
+- `python3 -B scripts/check_repository.py` passed seven checks and five
+  rejected share-card mutations. The checker and fixtures were unchanged.
+- All six skills passed the supplied skill-creator `quick_validate.py` using
+  `/usr/bin/python3 -B`. The default Python lacks PyYAML; no dependency was
+  installed. `git diff --check` passed.
+- Byte comparisons against the starting commit proved the complete Ship Git
+  delivery gate and Spec/Build security sections unchanged. The product
+  runbook remains byte-identical with the SHA-256 recorded above; its fixed
+  practices, evidence interpretation, and no-transmission boundary are intact.
+- Manual routing review covered a mechanical edit, an accepted technical
+  contract, an unresolved trust boundary, and delivery without target authority.
+  These are instruction inspections, not independent agent execution or proof
+  of future model behavior. No real history was accessed or report transmitted.
+
 ## Outcome
 
 Outcome status: **PENDING**.

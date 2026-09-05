@@ -1,6 +1,6 @@
 ---
 name: spec-project
-description: Audit technical specifications of any maturity or construct the missing contract from rough input for the smallest build-ready technical solution. Use when starting or changing an Application, Service, Automation, Integration, Library, or System and readiness, ownership, boundaries, acceptance, or implementation order must be established without rewriting resolved context.
+description: Assess build readiness or construct a missing technical contract when scope, ownership, boundaries, acceptance, or implementation order needs resolution. Preserve accepted specifications and existing-system decisions.
 ---
 
 # Project Spec
@@ -49,11 +49,11 @@ resolved business decisions, or create another goal.
 
 ## Inspect before asking
 
-Read the request, canonical source material, repository instructions, current
-code, interfaces, existing owners, operating evidence, and recovery paths.
-Link to canonical sources instead of copying them. Resolve facts through
-inspection; never ask an owner to restate discoverable repository or source
-truth.
+Read the request and repository instructions, then inspect canonical sources
+needed to resolve the change's dimensions below. Reuse accepted evidence;
+inspect code, interfaces, operating evidence, and recovery paths where the
+change affects them. Link to sources instead of copying them or asking the
+owner to restate discoverable facts.
 
 For every required dimension, record one evidence state:
 
@@ -119,16 +119,10 @@ silently bypass required protection.
 
 ## Ask only for owner decisions
 
-When one unresolved owner decision materially changes the solution:
-
-1. State the current best interpretation and evidence briefly.
-2. Ask exactly one question, including the best guess and why the answer
-   changes the result.
-3. Wait before asking another question.
-
-Do not send a questionnaire. Do not ask for facts that inspection can resolve.
-If implementation can safely choose a reversible technical detail, classify it
-as INFERRED and keep moving.
+Ask one question when an unresolved owner decision materially changes the
+solution. Include the current interpretation, evidence, and consequence; pause
+dependent work until resolved. Reversible technical choices within ordinary
+implementation authority can be INFERRED without another approval.
 
 ## Route technology decisions only when earned
 
