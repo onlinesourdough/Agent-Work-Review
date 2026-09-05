@@ -139,6 +139,23 @@ it does not claim a product release or new runtime proof.
   These are instruction inspections, not independent agent execution or proof
   of future model behavior. No real history was accessed or report transmitted.
 
+## Local README branding maintenance — 2026-09-05
+
+- Base: `76a13315b948692bd5b72b46ce925b4d7b49e776`; fresh fetch of
+  `origin/main` matched. Added the approved stack branding r1 banner and icon
+  under `assets/branding`, a README banner, and a linked 32-pixel footer icon.
+  Existing README prose is byte-preserved.
+- Exact binary copies match the original review inventory SHA-256 values:
+  banner `8c47cc85902f6e89b31d438494778bacc75b8c3a2cff59bdaba20025cc854ffd`;
+  icon `d598d25cdb945bc62c15758028234acce5df3cd3347e708d2089b98b40212322`.
+- Local checks passed: `python3 scripts/check_repository.py` (seven checks,
+  five rejected mutations), `git diff --check`, image/link target existence,
+  PNG dimensions (1536×512 and 512×512), and byte-preservation checks.
+  Removing the README additions in memory recovered its exact base bytes.
+- Recovery: remove only these branding additions and this proof entry;
+  remove the two newly added image files. No runtime or distribution changed.
+  Lead-bound Review and delivery remain pending; hosted rendering is unverified.
+
 ## Outcome
 
 Outcome status: **PENDING**.

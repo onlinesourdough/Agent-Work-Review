@@ -1,3 +1,5 @@
+![Agent Work Review](assets/branding/review-banner.png)
+
 # Agent Work Review
 
 Turn your local agent-working history into a practical review of how you create
@@ -103,3 +105,5 @@ evidence model, report structure, and wording.
 - [License](LICENSE)
 
 Canonical repository: [onlinesourdough/Agent-Work-Review](https://github.com/onlinesourdough/Agent-Work-Review)
+
+<a href="assets/branding/review-icon.png"><img src="assets/branding/review-icon.png" alt="Agent Work Review icon" width="32" height="32"></a>
