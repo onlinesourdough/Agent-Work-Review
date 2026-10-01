@@ -1,10 +1,8 @@
-![Agent Work Review](assets/branding/review-banner.png)
-
 # Agent Work Review
 
-Turn your local agent-working history into a practical review of how you create
-clarity, delivery, ownership, and business freedom. The result is a local
-report plus a separate, sanitized summary you may choose to share later.
+Review how you work with AI agents using their recorded local history. Get a
+practical report and up to three improvements to try. The history and results
+stay on your machine; a separate summary can be prepared for optional sharing.
 
 This is a public, standalone onlinesourdough Project. The repository owns the
 method and source of truth in [agent-work-review.md](agent-work-review.md). The
@@ -105,5 +103,3 @@ evidence model, report structure, and wording.
 - [License](LICENSE)
 
 Canonical repository: [onlinesourdough/Agent-Work-Review](https://github.com/onlinesourdough/Agent-Work-Review)
-
-<a href="assets/branding/review-icon.png"><img src="assets/branding/review-icon.png" alt="Agent Work Review icon" width="32" height="32"></a>
